@@ -3,3 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family:'Roboto';
+    src: url(/font/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: 'Roboto',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url(/image/pexels-technobulka-2908984.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.container{
+    color: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    width: max(40%,300px);
+    background-color: #fefefe;
+    margin: min(10%,100px) auto;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.title{
+    font-size: 1.7rem;
+    text-align: center;
+}
