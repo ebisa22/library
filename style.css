@@ -7,26 +7,323 @@
     font-family:'Roboto';
     src: url(/font/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
 }
-html,body{
-    height: 100%;
+ body{
+   min-height: 100vh;
+   height: auto;
 }
 body{
     font-family: 'Roboto',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: url(/image/pexels-technobulka-2908984.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     display: flex;
+    color: var(--primary-color);
+}
+:root{
+    --primary-color:#003049;
 }
 .container{
-    color: #000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-    width: max(40%,300px);
-    background-color: #fefefe;
-    margin: min(10%,100px) auto;
+    width: 95%;
+    background-color: rgba(200,200,200,0.6);
+    margin: 30px auto;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 20px 30px 20px;
+    height: 96%;
 }
 .title{
-    font-size: 1.7rem;
+    font-size:2rem;
     text-align: center;
+    text-transform: uppercase;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--primary-color);
+    
+}
+.new-book{
+    outline: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  padding: 5px;
+    background-color: var(--primary-color);
+    color: #Fff;
+    transition: 0.12s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-book:active{
+    font-size: 1.2rem;
+}
+#add-icon{
+    font-size:2rem;
+    margin-right: 5px;
+}
+.form-container{
+    width: 500px;
+    background-color: rgba(240,240,240,0.9);
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+padding: 15px 30px 20px;
+  margin: min(8%,30px) auto;
+  font-weight: 300;
+  color: var(--primary-color);
+}
+.form-container::backdrop{
+   background-color:rgba(33,33,33,0.8);
+}
+.form-container p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.txt-info{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns:100px 1fr;
+    gap: 20px;
+}
+.txt-info label{
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    
+}
+.txt-info input{
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    height: 38px;
+    padding-left: 13px;
+    font-weight: 300;
+    color: inherit;
+}
+.txt-info input:focus{
+    background-color: hsl(0, 0%, 97%);
+}
+.check-read{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.check-read>div{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.check-read>div>label{
+    font-size:1.1rem;
+    cursor: pointer;
+}
+.check-read>div>input{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+.button-container{
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-container>button{
+    outline: none;
+    font-size: 1.1rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 8px;
+   width: 90px;
+   cursor: pointer;
+}
+.button-container>button:active{
+    font-size: 1.01rem;
+}
+button#cancel{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+ 
+.book-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+   margin-top: 40px;
+   gap: 15px;
+   width: 100%;
+}
+.book{
+    width: 320px;
+    border: 1px solid #000;
+  border-radius: 6px;
+  padding:20px 30px;
+  background-color: #003049;
+  color: #fff;
+  position: relative;
+}
+.book>p{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px;
+   margin-bottom: 10px;
+   word-spacing: 0.2em;
+   overflow-x: auto;
+  }
+.bottom-container{
+margin-top: 20px;
+display: flex;
+gap: 30px;
+}
+.bottom-container>button{
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: #003049;
+    background-color: #fff;
+    padding: 10px;
+    line-height: 1.4;
+}
+.bottom-container>:nth-child(1){
+    font-size: 1.5rem;
+}
+.bottom-container>:nth-child(3){
+    color: red;
+    justify-self: end;
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    top: 3px;
+    font-size: 1.3rem;
+    right:0;
+}
+/* responsive tablet layout */
+@media screen and (max-width:780px) {
+    body{
+        min-height: 100vh;
+        height: auto;
+    }
+    .container{
+        width: 80%;
+    }
+}
+/* responsive mobile layout */
+@media screen and (max-width:420px) {
+    body{
+        display: block;
+    }
+  .container{
+    width: 92%;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 15px 30px 20px;
+    height: 96%;
+}
+.title{
+    font-size:1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+.new-book{
+    font-size: 1rem;
+  padding: 5px;
+}
+.new-book:active{
+    font-size: 0.92rem;
+}
+#add-icon{
+    font-size:1.2rem;
+}
+.form-container{
+ width: 80%;
+padding: 15px 30px 20px;
+  margin: 30px auto;
+ background-color: rgba(200,200,200,0.3);
+}
+.form-container p{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+.txt-info{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+}
+.txt-info label{
+    font-size: 1.03rem;
+    letter-spacing: 0.07em;
+}
+.txt-info input{
+    font-size: 0.8rem;
+    width: 80%;
+    height: 30px;
+    padding-left: 13px;
+    font-weight: 300;
+    color: inherit;
+}
+.check-read{
+    justify-content: space-between;
+}
+.check-read>div{
+    gap: 12px;
+}
+.check-read>div>label{
+    font-size:1rem;
+}
+.check-read>div>input{
+    width: 16px;
+    height: 16px;  
+}
+.button-container{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.button-container>button{
+    font-size: 1rem;
+    padding: 5px;
+   width: 70px;
+}
+.button-container>button:active{
+    font-size: 0.98rem;
+}
+.book-container{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 15px;
+   width: 100%;
+}
+.book{
+  width: 95%;
+  padding:20px 30px;
+}
+.book>p{
+    font-size: 0.92rem;
+  }
+.bottom-container{
+justify-content:space-around ;
+margin-top: 20px;
+}
+.bottom-container>:nth-child(1){
+    font-size: 1.15rem;
+}
+.bottom-container>:nth-child(2){
+    font-size:0.7rem;
+   padding: 10px 5px
+}
+.bottom-container>:nth-child(3){
+ font-size:0.95rem;
+}
 }

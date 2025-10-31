@@ -7,8 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <div class="container" data-yes>
+      <div class="container">
+
+        <div class="header">
        <p class="title">Library</p>
+       <button class="new-book" id="form-open" data-modal-open><span id="add-icon">+</span>New Book</button>
+        </div>
+
+     <dialog class="form-container" data-modal>
+        <form action="">
+               <p>Book basic information</p>
+               <div class="inp-lab-container txt-info">
+                 <label for="title">
+                    Book title:
+                 </label>
+                 <input type="text" id="title" required>
+               </div>
+               <div class="inp-lab-container txt-info">
+                 <label for="author">
+                    Book author:
+                 </label>
+                 <input type="text" id="author" required>
+               </div>
+               <div class="inp-lab-container txt-info">
+                 <label for="no-of-pages">
+                  Number of pages
+                 </label>
+                 <input type="number" id="no-of-pages" min="10" required>
+               </div>
+               <div class="inp-lab-container">
+                 <p>
+                    Have you read the book
+                 </p>
+                 <div class="check-read">
+                <div class="yes-read">
+                    <label for="yes">
+                        Yes
+                    </label>
+                    <input type="radio" id="yes" value="1" name="check" checked>
+                </div>
+                <div class="no-read">
+                    <label for="no">
+                        No
+                    </label>
+                    <input type="radio" id="no" value="0" name="check">
+                </div>
+                </div>
+               </div>
+        <div class="button-container">
+            <button id="cancel" type="button">Cancel</button>
+            <button id="add" type="submit">Add</button>
+        </div>
+        </form>
+     </dialog>
+     
+       <div class="book-container">
+  
+       </div>
       </div>
    <script src="script.js"></script>
 </body>
