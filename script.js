@@ -91,6 +91,12 @@ const numberOfPagesInput=document.querySelector('#no-of-pages');
 
 addButton.addEventListener('click',(e)=>{
   e.preventDefault();
+   if(
+    authorInput.value.trim()==''||
+    titleInput.value.trim()==''||
+    +(numberOfPagesInput.value)<=0
+  )
+     return 1;
  const isReadInput = document.querySelector('input[type="radio"]:checked');
  addBookTtoLibrary(titleInput.value,authorInput.value,+(numberOfPagesInput.value),isReadInput.value);
  displayBox();
