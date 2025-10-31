@@ -13,11 +13,9 @@
 }
 body{
     font-family: 'Roboto',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: url(/image/background.jpg) no-repeat;
-    background-size: cover;
-    background-position: bottom;
+   background-color:#334df650;
     display: flex;
-    color: var(--primary-color);
+ 
 }
 :root{
     --primary-color:#003049;
@@ -40,8 +38,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: var(--primary-color);
-    
+   color: #Fff;
 }
 .new-book{
     outline: none;
@@ -249,7 +246,6 @@ gap: 30px;
  width: 80%;
 padding: 15px 30px 20px;
   margin: 30px auto;
- background-color: rgba(200,200,200,0.3);
 }
 .form-container p{
     text-align: center;
