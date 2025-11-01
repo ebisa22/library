@@ -37,7 +37,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-   color: var(--primary-color);
+   color: var(--primary-colorb);
 }
 .new-book{
     outline: none;

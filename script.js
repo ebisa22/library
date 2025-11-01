@@ -88,7 +88,11 @@ const addButton=document.querySelector('#add');
 const authorInput=document.querySelector('#author');
 const titleInput=document.querySelector('#title');
 const numberOfPagesInput=document.querySelector('#no-of-pages');
-
+  function clearInputBox(){
+    authorInput.value='';
+    titleInput.value='';
+    numberOfPagesInput.value='';
+  }
 addButton.addEventListener('click',(e)=>{
   e.preventDefault();
    if(
@@ -101,6 +105,7 @@ addButton.addEventListener('click',(e)=>{
  addBookTtoLibrary(titleInput.value,authorInput.value,+(numberOfPagesInput.value),isReadInput.value);
  displayBox();
   formContainer.close();
+  clearInputBox();
 })
 //change read status and remove book from library
 function changeReadStatus(bookId){
