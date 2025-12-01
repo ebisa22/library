@@ -1,23 +1,19 @@
 
 const myLibrary=[];
 //book object constructor
-function Book(title,author,numberOfPages,isRead){
-   if(!new.target){
-    throw Error("You must use 'new' operator when you call object constructor");
-   }
-   this.title=title;
-   this.author=author;
-   this.numberOfPages=numberOfPages;
-   this.isRead=isRead;
-   this.id=crypto.randomUUID();
+class Book{
+  constructor(title,author,numberOfPages,isRead){
+    this.title=title;
+    this.author=author;
+    this.numberOfPages=numberOfPages;
+    this.isRead=isRead;
+    this.id=crypto.randomUUID();
+  }
+  info(){
+    return `${this.title} by ${this.author}, ${this.numberOfPages}, ${this.isRead? "already read":"not read yet"}`;
+  }
 }
-
-Book.prototype.info =function () {
-  return `${this.title} by ${this.author}, ${this.numberOfPages},${
-    this.isRead ? "already read" : "not read yet"
-  } `;
-};
-
+  
 //adds book to library
 function addBookTtoLibrary(title,author,numberOfPages,isRead){
      if(isRead=='1')
