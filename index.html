@@ -15,25 +15,34 @@
         </div>
 
      <dialog class="form-container" data-modal>
-        <form action="">
+        <form action="" novalidate>
                <p>Book basic information</p>
                <div class="inp-lab-container txt-info">
                  <label for="title">
                     Book title:
                  </label>
-                 <input type="text" id="title" required>
+                 <div class="input-control">
+                 <input type="text" id="title" placeholder="Atomic Habits" required>
+                  <p class="error"></p>
+                  </div>
                </div>
                <div class="inp-lab-container txt-info">
                  <label for="author">
                     Book author:
                  </label>
-                 <input type="text" id="author" required>
+                 <div class="input-control">
+                <input type="text" id="author" required placeholder="James Clear">
+                  <p class="error"></p>
+                  </div>       
                </div>
                <div class="inp-lab-container txt-info">
                  <label for="no-of-pages">
                   Number of pages
                  </label>
-                 <input type="number" id="no-of-pages" min="10" required>
+                 <div class="input-control">
+                 <input type="number" id="no-of-pages" min="10" max="5000" required placeholder="320">
+                  <p class="error"></p>
+                  </div>   
                </div>
                <div class="inp-lab-container">
                  <p>

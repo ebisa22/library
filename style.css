@@ -81,7 +81,7 @@ padding: 15px 30px 20px;
     margin-bottom: 30px;
 }
 .txt-info{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns:100px 1fr;
     gap: 20px;
@@ -99,6 +99,11 @@ padding: 15px 30px 20px;
     padding-left: 13px;
     font-weight: 300;
     color: inherit;
+
+}
+.txt-info input::placeholder{
+    color: #333;
+    opacity: 0.48;
 }
 .txt-info input:focus{
     background-color: hsl(0, 0%, 97%);
@@ -122,6 +127,18 @@ padding: 15px 30px 20px;
     height: 18px;
     cursor: pointer;
     accent-color: var(--primary-color);
+}
+.input-control{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+p.error{
+    font-size:0.8rem;
+    color: red;
+    align-self: flex-start;
+    margin-bottom: 0px;
 }
 .button-container{
     margin-top: 35px;
@@ -200,6 +217,7 @@ gap: 30px;
     font-size: 1.3rem;
     right:0;
 }
+
 /* responsive tablet layout */
 @media screen and (max-width:780px) {
     body{
